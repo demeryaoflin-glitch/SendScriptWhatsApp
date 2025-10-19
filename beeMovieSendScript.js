@@ -1,25 +1,13 @@
 async function enviarScript(scriptText){
-	const lines = scriptText.split(/[\n\t]+/).map(line => line.trim()).filter(line => line);
-	main = document.querySelector("#main"),
-	textarea = main.querySelector(`div[contenteditable="true"]`)
-	
-	if(!textarea) throw new Error("Não há uma conversa aberta")
-	
+	const lines = scriptText.split(/[\n\t]+/).map(line 
 	for(const line of lines){
-		console.log(line)
-	
-		textarea.focus();
-		document.execCommand('insertText', false, line);
+
 		textarea.dispatchEvent(new Event('change', {bubbles: true}));
 	
 		setTimeout(() => {
-			(main.querySelector(`[data-testid="send"]`) || main.querySelector(`[data-icon="send"]`)).click();
-		}, 100);
-		
-		if(lines.indexOf(line) !== lines.length - 1) await new Promise(resolve => setTimeout(resolve, 250));
-	}
+			(main.querySelector(`[data-testid="send"]`) || main.querySelector(`[data-icon="send"]`)ength - 1) await new Promise(resolve => setTimeout(resolve, 250))
 	
-	return lines.length;
+	return lines
 }
 
 enviarScript(`
@@ -54,16 +42,7 @@ Very proud.
 Ma! I got a thing going here.
 You got lint on your fuzz.
 Ow! That's me!
-Wave to us! We'll be in row 118,000.
-Bye!
-Barry, I told you, stop flying in the house!
-Hey, Adam.
-Hey, Barry.
-Is that fuzz gel?
-A little. Special day, graduation.
-Never thought I'd make it.
-Three days grade school, three days high school.
-Those were awkward.
+Wave to us! 
 Three days college. I'm glad I took a day and hitchhiked around The Hive.
 You did come back different.
 Hi, Barry. Artie, growing a mustache? Looks good.
@@ -71,18 +50,7 @@ Hear about Frankie?
 Yeah.
 You going to the funeral?
 No, I'm not going.
-Everybody knows, sting someone, you die.
-Don't waste it on a squirrel.
-Such a hothead.
-I guess he could have just gotten out of the way.
-I love this incorporating an amusement park into our day.
-That's why we don't need vacations.
-Boy, quite a bit of pomp under the circumstances.
-Well, Adam, today we are men.
-We are!
-Bee-men.
-Amen!
-Hallelujah!
+Everybody knows, sting someone, 
 Students, faculty, distinguished bees,
 please welcome Dean Buzzwell.
 Welcome, New Hive City graduating class of 9:15.
